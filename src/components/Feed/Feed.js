@@ -1,7 +1,9 @@
+import { observer } from "mobx-react-lite";
 import TopBar from "./TopBar";
 import style from "./Feed.module.css";
 import TweetCard from "../Tweet/TweetCard";
 import NewTweet from "../Tweet/NewTweet";
+import tweetsList from "../../mobx/tweet/TweetsList";
 
 const Feed = () => {
     return (
@@ -11,13 +13,10 @@ const Feed = () => {
                 <NewTweet />
                 <TweetCard />
                 <TweetCard />
-                <TweetCard />
-                <TweetCard />
-                <TweetCard />
-                <TweetCard />
+                {tweetsList.tweets.map(tweet => <TweetCard key={tweet.id} time={tweet.getTime} text={tweet.getText} />)}
             </div>
         </div>
     );
 };
 
-export default Feed;
+export default observer(Feed);

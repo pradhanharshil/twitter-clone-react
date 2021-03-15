@@ -1,10 +1,10 @@
-const Input = ({className, placeholder, value, onChange, type}) => {
+const Input = ({className, placeholder, value=undefined, onChange=null, type}) => {
     return (
         <input 
             className={className}
             placeholder={placeholder}
-            value={value || undefined}
-            onChange={onChange || null}
+            value={value}
+            onChange={onChange}
             type={type}/>
     );
 }
