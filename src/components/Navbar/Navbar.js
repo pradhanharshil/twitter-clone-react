@@ -10,6 +10,7 @@ import lists from "../../assets/icons/lists.png";
 import profile from "../../assets/icons/profile.png";
 import more from "../../assets/icons/more.png";
 import twitter from "../../assets/images/twitter.png";
+import UserInfoCard from "./UserInfoCard";
 
 const Navbar = () => {
     return (
@@ -50,6 +51,7 @@ const Navbar = () => {
                 <Button 
                     className={style.item_button}
                     children="Tweet"/>
+                <UserInfoCard />
             </div>
         </div>
     );

@@ -49,7 +49,7 @@
     cursor: pointer;
     border-radius: 10rem;
     padding: 15px;
-    width: 12rem;
+    width: 90%;
     background-color: #248cfa;
     color: white;
     border: none;
@@ -57,4 +57,29 @@
 .item:hover {
     background-color: #e9f2ff;
     color: #248cfa;
+}
+.user_info_card {
+    display: flex;
+    width: fit-content;
+    margin: 20px 0;
+}
+.user_info_card_img {
+    height: 3rem;
+    width: 3rem;
+}
+.user_detail {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
+}
+.bold {
+    font-weight: bold;
+}
+.uname {
+    color: gray;
+}
+.options_img {
+    height: 1.5rem;
+    width: 1.5rem;
+    cursor: pointer;
 }

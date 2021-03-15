@@ -14,15 +14,15 @@ const Panel = () => {
             <img
                 className={style.icon} 
                 src={retweet}
-                alt="Comment"/>
+                alt="Retweet"/>
             <img
                 className={style.icon} 
                 src={like}
-                alt="Comment"/>
+                alt="Like"/>
             <img
                 className={style.icon} 
                 src={reply}
-                alt="Comment"/>
+                alt="Reply"/>
         </div>
     );  
 }

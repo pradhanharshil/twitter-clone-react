@@ -24,7 +24,6 @@
 .floating_panel {
     width: 90%;
     background-color: #f7f9fa;
-    height: 50vh;
     border-radius: 1.5rem;
     padding: 1rem;
     margin: 1rem 0;
@@ -44,4 +43,10 @@
 .tweets {
     color: gray;
     font-size: 0.9rem;
+}
+.header {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.8rem 0.5rem;
+    border-bottom: 1px solid lightgray;
 }

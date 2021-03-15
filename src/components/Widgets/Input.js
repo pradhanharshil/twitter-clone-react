@@ -3,7 +3,7 @@ const Input = ({className, placeholder, value, onChange, type}) => {
         <input 
             className={className}
             placeholder={placeholder}
-            value={value || null}
+            value={value || undefined}
             onChange={onChange || null}
             type={type}/>
     );

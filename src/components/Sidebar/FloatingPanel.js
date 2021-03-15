@@ -4,6 +4,7 @@ import TrendItem from "./TrendItem";
 const FloatingPanel = () => {
     return (
         <div className={style.floating_panel}>
+            <div className={style.header}>What's happening</div>
             <TrendItem
                 trend="IndiaVSEngland"
                 count="1M" />

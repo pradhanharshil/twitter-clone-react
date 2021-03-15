@@ -1,6 +1,6 @@
 .tweet {
     display: flex;
-    margin: 3px 0px;
+    margin: 1px 0px;
     background-color: white;
     border-top: 1px solid #f3f3f3;
     border-bottom: 1px solid #f3f3f3;
@@ -16,7 +16,8 @@
 .bold {
     font-weight: bold;
 }
-.uname {
+.uname,
+.tweet_time {
     color: gray;
     padding-left: 5px;
 }
@@ -45,4 +46,65 @@
     justify-content: space-between;
     padding-right: 20px;
     margin: 5px 0px;
+}
+.new_tweet {
+    display: flex;
+    background-color: white;
+    border-bottom: 1px solid #f3f3f3;
+    margin-bottom: 0.2rem;
+}
+.add_tweet {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+.new_tweet_actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tweet_button {
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    border-radius: 10rem;
+    padding: 10px 15px;
+    background-color: #248cfa;
+    color: white;
+    border: none;
+    margin: 15px;
+}
+.textarea {
+    resize: none;
+    height: 4rem;
+    padding: 0.2rem;
+    color: black;
+    font-size: 1.15rem;
+    outline: none;
+    border: none;
+}
+.new_tweet_icons {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+}
+.new_tweet_icons img {
+    cursor: pointer;
+}
+.tweet_icon {
+    height: 1.2rem;
+    width: 1.2rem;
+}
+.heading {
+    display: flex;
+    justify-content: space-between;
+}
+.dots {
+    padding: 0;
+    margin: 0 10px;
+    height: 1rem;
+    width: 1rem;
+    cursor: pointer;
 }
