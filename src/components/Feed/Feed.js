@@ -1,29 +1,28 @@
-import { observer } from "mobx-react-lite";
 import TopBar from "./TopBar";
 import style from "./Feed.module.css";
-import TweetCard from "../Tweet/TweetCard";
-import NewTweet from "../Tweet/NewTweet";
-import tweetsList from "../../mobx/tweet/TweetsList";
+import TweetsContainer from "./TweetsContainer";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route
+} from "react-router-dom";
 
 const Feed = () => {
     return (
         <div className={style.feed}>
-            <TopBar />
+            <TopBar title="Home" />
             <div className={style.tweets_list}>
-                <NewTweet />
-                <TweetCard />
-                <TweetCard />
-                {tweetsList.tweets.map(tweet => 
-                    <TweetCard 
-                        likes={tweet.getLikes}
-                        retweets={tweet.getRetweets}
-                        key={tweet.id} 
-                        time={tweet.getTime} 
-                        text={tweet.getText} />)
-                }
+                <Router>
+                    <Switch>
+                        <Route 
+                            exact 
+                            path="/"
+                            component={TweetsContainer} />
+                    </Switch>
+                </Router>
             </div>
         </div>
     );
 };
 
-export default observer(Feed);
+export default Feed;

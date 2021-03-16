@@ -1,4 +1,4 @@
-import {observer} from "mobx-react-lite";
+import { observer } from "mobx-react-lite";
 import style from "./Tweet.module.css";
 import UserImage from "./UserImage";
 import Panel from "./Panel";
@@ -10,7 +10,7 @@ released. It comes with some exciting features
 like new GNOME 4.0, support for fractional
 scaling out of the box and many more.`;
 
-const TweetCard = ({text=content, time=`1h ago`, likes, retweets}) => {
+const TweetCard = ({ text = content, time = `1h ago`, likes, retweets, deleteTweet=null }) => {
     return (
         <div className={style.tweet}>
             <UserImage img={user} />
@@ -22,16 +22,17 @@ const TweetCard = ({text=content, time=`1h ago`, likes, retweets}) => {
                         <span className={style.tweet_time}>{time}</span>
                     </div>
                     <div>
-                        <img 
-                            className={style.dots} 
-                            src={dots} 
-                            alt="Dots"/>
+                        <img
+                            onClick={deleteTweet}
+                            className={style.dots}
+                            src={dots}
+                            alt="Dots" />
                     </div>
                 </div>
                 <div>{text}</div>
-                <Panel 
+                <Panel
                     likes={likes}
-                    retweets={retweets}/>
+                    retweets={retweets} />
             </div>
         </div>
     );
