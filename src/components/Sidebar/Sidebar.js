@@ -11,7 +11,10 @@ const Sidebar = () => {
     useEffect(() => {
         fetch("https://api.github.com/users")
             .then(response => response.json())
-            .then(data => setUsers(data));
+            .then(data => {
+                const index = Math.random() * (data.length - 5);
+                setUsers(data.slice(index, index+5));
+            });
     }, []);
 
     return (
