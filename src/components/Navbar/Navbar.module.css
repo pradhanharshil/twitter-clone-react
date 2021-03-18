@@ -88,3 +88,34 @@
 .img_content {
     display: flex;
 }
+.bottom_nav {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .nav {
+        display: none;
+    }
+    .bottom_nav {
+        display: block;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        height: 3rem;
+        z-index: 10;
+        background-color: white;
+        border-top: 1px solid #f3f3f3;
+    }
+    .bottom_nav_items {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+    .bottom_nav_img {
+        height: 1.5rem;
+        width: 1.5rem;
+        cursor: pointer;
+    }
+}

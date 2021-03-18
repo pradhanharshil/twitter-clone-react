@@ -7,6 +7,7 @@ import {
     Route
 } from "react-router-dom";
 import Thread from "../Thread/Thread";
+import BottomNav from "../Navbar/BottomNav";
 
 const Feed = () => {
     return (
@@ -25,6 +26,7 @@ const Feed = () => {
                             component={Thread} />
                     </Switch>
                 </div>
+                <BottomNav />
             </Router>
         </div>
     );

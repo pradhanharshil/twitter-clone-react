@@ -7,7 +7,7 @@ const NavItem = ({logo, name}) => {
                 className={style.item_logo}
                 src={logo} 
                 alt={name}/>
-            <p>{name}</p>
+            <p className={style.item_name}>{name}</p>
         </div>
     );
 }

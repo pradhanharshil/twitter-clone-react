@@ -34,7 +34,7 @@ const TweetCard = ({ text = content, time = `1h ago`, likes, retweets, deleteTwe
                     </div>
                 </div>
                 <Link to={`/tweet/${id}`}>
-                    <div>{text}</div>
+                    <div className={style.tweet_text}>{text}</div>
                 </Link>
                 <Panel
                     likes={likes}
