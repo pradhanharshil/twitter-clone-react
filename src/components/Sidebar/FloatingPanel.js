@@ -1,7 +1,7 @@
 import { observer } from "mobx-react-lite";
 import style from "./Sidebar.module.css";
 
-const FloatingPanel = ({ header, render, data, styles=null }) => {
+const FloatingPanel = ({ header, render, data, styles = null, fallback = null }) => {
     return (
         <div className={style.floating_panel}>
             <div className={style.header}>{header}</div>

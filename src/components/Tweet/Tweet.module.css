@@ -4,6 +4,7 @@
     background-color: white;
     border-top: 1px solid #f3f3f3;
     border-bottom: 1px solid #f3f3f3;
+    z-index: 1;
 }
 .user_image {
     width: 10%;
@@ -76,7 +77,8 @@
     border: none;
     margin: 15px;
 }
-.textarea {
+.textarea,
+.textarea_edit {
     resize: none;
     height: 4rem;
     padding: 0.2rem;
@@ -84,6 +86,10 @@
     font-size: 1.15rem;
     outline: none;
     border: none;
+}
+.textarea_edit {
+    display: none;
+    font-size: 1rem;
 }
 .new_tweet_icons {
     display: flex;
@@ -124,6 +130,9 @@ a {
 .count {
     color: gray;
     margin-left: 3px;
+}
+.container {
+    position: relative;
 }
 @media (min-width: 850px) and (max-width: 1000px) {
     .image {

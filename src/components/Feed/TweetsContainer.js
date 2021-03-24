@@ -8,11 +8,18 @@ const TweetsContainer = () => {
     useEffect(() => {
         document.title = "Twitter";
     }, []);
+    if (tweetsList.tweets.length === 0) {
+        return (
+            <>
+                <NewTweet />
+                <TweetCard />
+                <TweetCard />
+            </>
+        );
+    }
     return (
         <>
             <NewTweet />
-            <TweetCard />
-            <TweetCard />
             {tweetsList.tweets.map(tweet =>
                 <TweetCard
                     likes={tweet.getLikes}

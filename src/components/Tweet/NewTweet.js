@@ -10,6 +10,7 @@ const NewTweet = () => {
     const textRef = useRef(null);
     const clickHandler = () => {
         tweetsList.addTweet(textRef.current.value);
+        textRef.current.value = "";
     }
     return (
         <div className={style.new_tweet}>

@@ -34,7 +34,8 @@ const Sidebar = () => {
                                 key={trend.trend}
                                 title={`#${trend.trend}`}
                                 text={`${trend.tweets} Tweets`} />)
-                    } />
+                    }
+                    fallback={"test"} />
                 <FloatingPanel
                     styles={style.center}
                     header="Who to follow"
