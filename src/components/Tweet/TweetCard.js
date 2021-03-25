@@ -18,12 +18,8 @@ const TweetCard = ({ text = content, time = `1h ago`, likes, retweets, deleteTwe
     const menuRef = useRef(null);
     const inputRef = useRef(null);
     const tweetTextRef = useRef(null);
-    const [edit, setEdit] = useState(false);
+    const [edit, setEdit] = useState(true);
     const handler = () => {
-        // const display = menuRef.current.style.display;
-        // display === "none" || display === ""
-        //     ? menuRef.current.style.display = "block"
-        //     : menuRef.current.style.display = "none"
         menuRef.current.style.display = "block";
     }
     const editHandler = () => {
@@ -31,12 +27,11 @@ const TweetCard = ({ text = content, time = `1h ago`, likes, retweets, deleteTwe
             tweetTextRef.current.style.display = "none";
             inputRef.current.style.display = "block";
             inputRef.current.value = text;
-            setEdit(state => !state);
         } else {
             tweetTextRef.current.style.display = "block";
             inputRef.current.style.display = "none";
-            setEdit(state => !state);
         }
+        setEdit(state => !state);
     }
     return (
         <div className={style.container}>
